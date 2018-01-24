@@ -1,0 +1,1 @@
+# zabbix-cisco-ucs-adapter
