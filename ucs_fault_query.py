@@ -118,9 +118,15 @@ if server_type == 'ucsm':
 
 elif server_type == 'imc':
     handle = ImcHandle(args.ucs_host, username, password)
-    if not handle.login():
-        print("Failed to connect to {} as user {}!".format(args.ucs_host,
-                                                           username))
+    try:
+        if not handle.login():
+            print("Failed to connect to {} as user {}!".format(args.ucs_host,
+                                                               username))
+            exit(1)
+    except IndexError:
+        print('An exception was thrown trying to log into {}. '
+              'It may be running an old/unsupported firmware version.'.format(
+            args.ucs_host))
         exit(1)
 
     # Output the list of faults, if any, with the given severity level
