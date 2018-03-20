@@ -1,9 +1,10 @@
 # Zabbix / Cisco UCS adapter
 
-This repo contains a script that can be plugged into a 
-[Zabbix](https://www.zabbix.com/]) monitoring system to allow it to pull a list
-of current faults from a UCS Manager, optionally filtered by severity. You can
-also just use it from the command line.
+This repo contains a script to pull a list of current faults from a UCS Manager
+(UCSM) or standalone Cisco Integrated Management Controller (IMC), optionally 
+filtered by severity. There are instructions below on how to integrate this 
+with the [Zabbix](https://www.zabbix.com/]) monitoring platform, and you can 
+also just run it from the command line.
 
 ## Dependencies
 * Python 3
