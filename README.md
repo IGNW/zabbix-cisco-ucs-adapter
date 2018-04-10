@@ -26,14 +26,17 @@ also just run it from the command line.
 
 ## CLI usage and example
 ```
-usage: ucs_fault_query.py [-h] [--config CONFIG] [--severity SEVERITY]
+usage: ucs_fault_query.py [-h] [--config CONFIG]
+                          [--severity {critical,major,minor,warning,info}]
                           [--type TYPE]
-                          ucs_host
+                          ucs_host [alt_address [alt_address ...]]
 
 Get a list of current UCS device faults.
 
 positional arguments:
-  ucs_host             IP address or hostname of the UCS device.
+  ucs_host              Name or IP address of the UCS device.
+  alt_address           Space delimited list of alternate hostnames/addresses
+                        to try
 
 optional arguments:
   -h, --help           show this help message and exit
