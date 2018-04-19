@@ -10,6 +10,7 @@ also just run it from the command line.
 * Python 3
 * [ucsmsdk](https://github.com/CiscoUcs/ucsmsdk)
 * [imcsdk](https://github.com/CiscoUcs/imcsdk)
+* CIMC firmware version 1.5(4) or higher
 
 ## Installation (Unix-based)
 1. Download the code to your Zabbix system.
